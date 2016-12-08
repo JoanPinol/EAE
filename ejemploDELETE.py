@@ -2,6 +2,7 @@
 # coding=utf-8
 
 import MySQLdb
+import traceback
 
 # Definimos variables de acceso a BDD
 host = "localhost"
@@ -25,6 +26,7 @@ try:
 except:
    # Si se genero algún error revertamos la operación
    bd.rollback()
+   traceback.print_exc()
 
 print str(cursor.rowcount)+" elementos borrados"
 # Nos desconectamos de la base de datos
