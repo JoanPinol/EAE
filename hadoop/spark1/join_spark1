@@ -1,8 +1,8 @@
-fileA = sc.textFile("input1/join1_FileA.txt")
+fileA = sc.textFile("input/join1_FileA.txt")
 
 fileA.collect()
 
-fileB = sc.textFile("input1/join1_FileB.txt")
+fileB = sc.textFile("input/join1_FileB.txt")
 
 fileB.collect()
 
