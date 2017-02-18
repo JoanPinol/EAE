@@ -4,7 +4,7 @@ import sys
 for line in sys.stdin:
     line       = line.strip()   #quita retorno de carro
     key_value  = line.split(",")   #separa linea en clave valor
-    key_in     = key_value[0].split(" ")   #clave será el primer item
+    key_in     = key_value[0].split(" ")   #clave sera el primer item
     value_in   = key_value[1]   #valor el segundo
 
     #print key_in
