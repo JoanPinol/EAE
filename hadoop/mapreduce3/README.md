@@ -1,4 +1,10 @@
-Resultados:<br/>
+<b>Introducción</b><br/>
+Agrupar todos los shows de la cadena ABC para obtener su número de espectadores. <br/>
+
+<b>Pasos</b><br/>
+Ejecutar en shell "sh make_data_join2.txt" para generar los ficheros de datos. Éstos tendrán la información de shows y canales (join2_genchan\*) y espectadores de cada show (join2_gennum\*). Una vez generados los datos, ejecutar MapReduce para la tarea.<br/>
+
+<b>Resultados:</b><br/>
 Almost_Games 49237<br/>
 Almost_News 46592<br/>
 Almost_Show 50202<br/>
