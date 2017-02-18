@@ -4,8 +4,8 @@ import sys
 prev_word          = "  "                #inicializar prev_word
 months             = ['Jan','Feb','Mar','Apr','Jun','Jul','Aug','Sep','Nov','Dec']
 
-dates_to_output    = [] #una lista vacía para manejar fechas para una palabra
-day_cnts_to_output = [] #una lista vacía para contadores de fechas 
+dates_to_output    = [] #una lista vacia para manejar fechas para una palabra
+day_cnts_to_output = [] #una lista vacia para contadores de fechas 
 
 line_cnt           = 0  #contador de lineas
 
