@@ -1,3 +1,6 @@
+<b>Descripción:</b> <br/>
+Ejemplo de join entre dos ficheros <br/>
+
 <b>Resultados esperados:</b> <br/>
 
 ec-15 able 100 991	<br/>
