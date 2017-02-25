@@ -1,2 +1,2 @@
 # EAE
-Ejemplos para las clases de EAE
+Big Data Techniques: course code and examples
