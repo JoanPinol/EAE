@@ -76,4 +76,4 @@ SET hive.exec.dynamic.partition.mode = nonstrict;
 INSERT OVERWRITE TABLE onTimePerfPart PARTITION(Year, Month) SELECT DayofMonth, DayOfWeek, DepTime, CRSDepTime, ArrTime, CRSArrTime, UniqueCarrier, FlightNum, TailNum, ActualElapsedTime, CRSElapsedTime, AirTime, ArrDelay, DepDelay, Origin, Dest, Distance, TaxiIn, TaxiOut, Cancelled, CancellationCode, Diverted, CarrierDelay, WeatherDelay, NASDelay, SecurityDelay, LateAircraftDelay, Year, Month FROM onTimePerfExt;
 
 #test performance
-SELECT * FROM ontimeperfpart where year = 2008;
+SELECT * FROM ontimeperfhdfs where year = 2008 and tailnum = 'N763SW' and dest = 'TPA';
