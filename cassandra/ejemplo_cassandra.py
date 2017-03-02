@@ -41,3 +41,5 @@ for row in rows:
 
 #Borrar keyspace creado
 session.execute("DROP KEYSPACE " + KEYSPACE)
+
+cluster.shutdown()
