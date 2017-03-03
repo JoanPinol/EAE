@@ -3,10 +3,10 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 import pprint
 
-# Make the same request we did earlier, but with the coordinates of San Francisco instead.
+# realiza petición a la api
 response = requests.get("http://api.open-notify.org/iss-now.json")
 
-# Get the response data as a python object.  Verify that it's a dictionary.
+# recupera la response de la llamada
 data = response.json()
 
 
