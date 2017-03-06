@@ -13,5 +13,5 @@ STORED AS TEXTFILE
 LOCATION
   's3a://xxxx/uploads/test/movies'
 TBLPROPERTIES (
-  'skip.header.line.count'='1', 
+  'skip.header.line.count'='1'
 )
