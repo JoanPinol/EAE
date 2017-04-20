@@ -1,0 +1,44 @@
+hdfs dfs -mkdir /user/cloudera/input
+hdfs dfs -put testfile1 /user/cloudera/input
+hdfs dfs -ls /user/cloudera/input
+hdfs dfs -cat /user/cloudera/output_new/part-00000
+hdfs dfs -getmerge /user/cloudera/output_new/* wordcount_num0_output.txt
+hdfs dfs -rm -r input
+
+
+
+chmod +x join1_mapper.py
+
+
+cat join1_File*.txt | ./join1_mapper.py | sort | ./join1_reducer.py
+
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
+   -input /user/cloudera/input \
+   -output /user/cloudera/output_new \
+   -mapper /home/cloudera/Desktop/exercises/ex1/wordcount_mapper.py \
+   -reducer /home/cloudera/Desktop/exercises/ex1/wordcount_reducer.py
+   
+   
+   
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
+   -input /user/cloudera/input \
+   -output /user/cloudera/output_new_0 \
+   -mapper /home/cloudera/Desktop/exercises/ex1/wordcount_mapper.py \
+   -reducer /home/cloudera/Desktop/exercises/ex1/wordcount_reducer.py \
+   -numReduceTasks 0
+   
+   
+   
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
+   -input /user/cloudera/input \
+   -output /user/cloudera/output_join \
+   -mapper /home/cloudera/Desktop/exercises/ex2/join1_mapper.py \
+   -reducer /home/cloudera/Desktop/exercises/ex2/join1_reducer.py
+   
+   
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
+   -input /user/cloudera/input \
+   -output /user/cloudera/output_join_2 \
+   -mapper /home/cloudera/Desktop/exercises/ex2/join2_mapper.py \
+   -reducer /home/cloudera/Desktop/exercises/ex2/join2_reducer.py \
+   -numReduceTasks 1  
