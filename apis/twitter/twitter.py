@@ -2,7 +2,7 @@
 # Indicamos que vamos a utilizar la librería tweepy que hemos instalado 
 import tweepy 
 
-# El siguiente paso es indicar los datos de conexión que hemos creado en el primer apartado del documento ( “creación de aplicación en Twitter” ) 
+# El siguiente paso es indicar los datos de conexión que hemos creado en el primer apartado del documento ( “ver instrucciones en README.md” ) 
 consumer_key = "your_consumer_key_here" 
 consumer_secret = "your_consumer_secret_here" 
 access_token = "your_access_token_here" 
