@@ -20,17 +20,20 @@ me = api.me()
 print "Nombre: " + me.screen_name 
 print "Descripcion: " + me.description 
 print "Numero de amigos: " + str(me.friends_count)
-## La siguiente consulta que vamos a recuperar a la API es recueprar los tweets que contengan un hashtag concreto, por ejemplo gripe
 
+## parámetros de búsqueda en la api
 key = "messi"
 tweet_count = 100
 tweet_lang = "es"
 tweet_since="2017-03-01"
 tweet_until="2017-04-30"
 
+#iteramos por todas las páginas de la respuesta
 for pagina in tweepy.Cursor(api.search, q= key, lang=tweet_lang, count=tweet_count,  
 			include_entities=True, since=tweet_since, until=tweet_until).pages():  
+	#para cada página, iteramos por sus tweets
 	for tweet in pagina:
+		#mostramos en pantalla la info de cada tweet
 		print tweet.text.encode('utf8') 
 		print "Favoritos: " + str(tweet .favorite_count) 
 		print "Autor: " + str(tweet .author.profile_use_background_image) 
